@@ -5,6 +5,4 @@
       with a component-based architecture and React Router for seamless navigation between the logo page, login, signup, and 
       home pages. The system allows users to securely register and log in, after which they are redirected to the home page 
       that introduces the purpose and features of the application. The design focuses on simplicity, accessibility, and a 
-      calming user experience suitable for mental health applications. This project can be extended by integrating a 
-      machine learning backend to analyze user questionnaire responses and recommend appropriate therapy types, making 
-      it both academically relevant and practically scalable.
+      calming user experience suitable for medical applications. 
