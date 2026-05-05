@@ -1,0 +1,97 @@
+/* frontend/src/autism/AssessmentForm.css */
+
+.af-page { max-width: 680px; margin: 0 auto; padding: 2rem 1rem; }
+
+.af-tag   { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #888; }
+.af-title { font-size: 26px; font-weight: 600; margin: 6px 0 4px; color: #1a1a1a; }
+.af-sub   { font-size: 13px; color: #666; margin-bottom: 1.5rem; }
+
+/* Progress */
+.af-progress { margin-bottom: 2rem; }
+.af-progress-track { height: 3px; background: #e5e5e5; border-radius: 2px; }
+.af-progress-fill  { height: 3px; background: #1a1a1a; border-radius: 2px; transition: width .4s; }
+.af-progress-labels { display: flex; justify-content: space-between; font-size: 11px; color: #999; margin-top: 5px; }
+
+/* Cards */
+.af-card  { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+.af-qnum  { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+.af-qnum code { font-size: 11px; background: #f4f4f4; padding: 1px 5px; border-radius: 4px; }
+.af-qtitle { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+.af-qsub   { font-size: 12px; color: #888; margin-bottom: 12px; }
+.af-err    { font-size: 12px; color: #e74c3c; display: block; margin-bottom: 6px; }
+
+/* Inputs */
+.af-form input[type=text],
+.af-form input[type=number],
+.af-form select {
+  width: 100%; padding: 10px 12px; font-size: 14px;
+  border: 1px solid #ddd; border-radius: 10px;
+  background: #fff; color: #1a1a1a; outline: none;
+  font-family: inherit;
+}
+.af-form input:focus, .af-form select:focus { border-color: #1a1a1a; }
+.af-form input.err { border-color: #e74c3c; }
+.af-field label { font-size: 12px; color: #666; display: block; margin-bottom: 4px; }
+.af-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Behaviour buttons */
+.af-beh-group { display: flex; flex-direction: column; gap: 8px; }
+.af-beh-btn {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px; border: 1px solid #e0e0e0; border-radius: 12px;
+  background: #fff; cursor: pointer; text-align: left; transition: all .15s;
+}
+.af-beh-btn:hover { background: #f9f9f9; }
+.af-beh-btn.beh-sel { border-color: #2c3e50; background: #f8f9fa; }
+.beh-name  { font-size: 14px; font-weight: 600; color: #1a1a1a; }
+.beh-desc  { font-size: 12px; color: #888; margin-top: 2px; }
+.beh-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+
+/* High / Low buttons */
+.af-hl-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.af-lmh-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+.hl-btn {
+  position: relative; padding: 16px 14px; border: 1px solid #e0e0e0;
+  border-radius: 12px; background: #fff; cursor: pointer;
+  text-align: left; transition: all .18s;
+}
+.hl-btn:hover { background: #f9f9f9; }
+.hl-label    { display: block; font-size: 17px; font-weight: 700; color: #1a1a1a; margin-bottom: 3px; }
+.hl-encoded  { display: block; font-size: 11px; color: #999; margin-bottom: 6px; }
+.hl-desc     { font-size: 12px; color: #777; line-height: 1.4; margin: 0; }
+.hl-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 1.5px solid #ddd; position: absolute; top: 12px; right: 12px;
+}
+
+/* Selected states */
+.hl-high { border-color: #c0392b !important; background: #fff5f5 !important; }
+.hl-high .hl-label  { color: #c0392b; }
+.hl-high .hl-encoded{ color: #e74c3c; }
+.hl-high .hl-dot    { border-color: #c0392b; background: #c0392b; }
+
+.hl-low  { border-color: #27ae60 !important; background: #f0fff4 !important; }
+.hl-low .hl-label   { color: #27ae60; }
+.hl-low .hl-encoded { color: #2ecc71; }
+.hl-low .hl-dot     { border-color: #27ae60; background: #27ae60; }
+
+.hl-med  { border-color: #e67e22 !important; background: #fffbf0 !important; }
+.hl-med .hl-label   { color: #e67e22; }
+.hl-med .hl-encoded { color: #f39c12; }
+.hl-med .hl-dot     { border-color: #e67e22; background: #e67e22; }
+
+/* Auto cards */
+.af-auto-row  { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 12px; }
+.af-auto-card { background: #f7f7f7; border-radius: 10px; padding: 10px 12px; }
+.ac-label { font-size: 11px; color: #999; font-family: monospace; margin-bottom: 3px; }
+.ac-val   { font-size: 16px; font-weight: 600; color: #1a1a1a; }
+
+/* Submit */
+.af-submit {
+  width: 100%; padding: 15px; font-size: 15px; font-weight: 600;
+  background: #1a1a1a; color: #fff; border: none; border-radius: 12px;
+  cursor: pointer; margin-top: 1.5rem; letter-spacing: .02em; transition: opacity .2s;
+}
+.af-submit:hover    { opacity: .85; }
+.af-submit:disabled { opacity: .5; cursor: not-allowed; }

@@ -1,0 +1,149 @@
+/* 🌸 GLOBAL */
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.login-title {
+  font-size: 38px;
+  text-align: center;
+  color: #ff69b4;
+
+  text-shadow: 
+    2px 2px 0px #fff,
+    4px 4px 0px #a6c1ee;
+
+  font-family: "Comic Sans MS", cursive;
+}
+
+/* 🌈 MAIN CONTAINER */
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ☁️ FLOATING BUBBLES */
+.center::before,
+.center::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.center::before {
+  top: 10%;
+  left: 10%;
+}
+
+.center::after {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 🧸 FLEX WRAPPER */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  z-index: 1;
+}
+
+/* 🎨 LEFT IMAGE */
+.login-image {
+  width: 350px;
+  height: 350px;
+  background-image: url("https://png.pngtree.com/png-clipart/20190515/original/pngtree-set-of-vector-icons-little-children-playing-with-toys-png-image_3562501.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+/* 🧸 LOGIN CARD */
+.login-wrapper form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+/* 🌈 TITLE */
+.login-wrapper h2 {
+  margin-bottom: 20px;
+  color: #ff69b4;
+  font-size: 26px;
+}
+
+/* ✏️ INPUTS */
+.login-wrapper input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* ✨ INPUT FOCUS */
+.login-wrapper input:focus {
+  outline: none;
+  border-color: #ff8ac6;
+  box-shadow: 0 0 10px rgba(255, 138, 198, 0.5);
+}
+
+/* 🚀 BUTTON */
+.login-wrapper button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff9a9e, #a18cd1);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🎉 BUTTON HOVER */
+.login-wrapper button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff758c, #6a11cb);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .login-image {
+    width: 200px;
+    height: 200px;
+  }
+}

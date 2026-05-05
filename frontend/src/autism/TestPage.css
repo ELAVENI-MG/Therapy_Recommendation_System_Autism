@@ -1,0 +1,106 @@
+/* 🌈 FULL PAGE BACKGROUND */
+.test-container {
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+
+  background: linear-gradient(135deg, #dbeafe, #fce7f3, #e0f2fe);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎬 BACKGROUND ANIMATION */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌟 FLOATING SHAPES */
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 12s infinite ease-in-out;
+}
+
+.s1 {
+  width: 150px;
+  height: 150px;
+  background: #93c5fd;
+  top: 15%;
+  left: 10%;
+}
+
+.s2 {
+  width: 120px;
+  height: 120px;
+  background: #f9a8d4;
+  bottom: 15%;
+  right: 10%;
+}
+
+.s3 {
+  width: 100px;
+  height: 100px;
+  background: #6ee7b7;
+  top: 60%;
+  left: 70%;
+}
+
+/* 🎬 FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🖼️ IMAGE STYLE */
+.test-img {
+  width: 600px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+
+  background: white;
+  padding: 10px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  display: block;
+  margin: 25px auto;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+/* 🔘 BUTTON STYLE */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(45deg, #7c3aed, #ec4899);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
