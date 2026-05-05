@@ -1,4 +1,5 @@
-#AI-Driven Therapy Recommendation for Early Detection of Autism Therapy Recommendation System#
+# AI-Driven Therapy Recommendation for Early Detection of Autism Therapy Recommendation System
+
       This project is a Therapy Recommendation System developed as a final year academic project with the aim of providing 
       personalized mental health therapy suggestions using a user-friendly web interface. The frontend is built using React 
       with a component-based architecture and React Router for seamless navigation between the logo page, login, signup, and 
